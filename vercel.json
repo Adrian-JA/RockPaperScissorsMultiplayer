@@ -2,5 +2,11 @@
     "version": 2,
     "name": "rock-scissors-paper-multiplayer",
     "builds": [{ "src": "src/server.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "src/server.js" }]
+    "routes": [
+        { "src": "/(.*)", "dest": "src/server.js" },
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
