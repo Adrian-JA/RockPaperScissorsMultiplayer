@@ -73,7 +73,7 @@ function selectOption(elements, isOnline) {
                 return;
             }
 
-            if (isOnline && isOptionsPicked.isFirstOptionPicked === false) {
+            if (isOnline && !isOptionsPicked.isFirstOptionPicked) {
                 optionsContainer.classList.add("options--selected");
 
                 firstPlayerOption(option);

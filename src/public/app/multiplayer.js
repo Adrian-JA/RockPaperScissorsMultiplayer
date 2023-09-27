@@ -1,24 +1,11 @@
-import { Options } from '../components/Options.js';
-import { SecondOption } from '../components/SecondOption.js';
-import { Timer } from '../components/Timer.js';
-import { MainTemplate } from '../views/Main.js';
-import { OnlineTemplate } from '../views/Online.js';
-import {
-  getColorOption,
-  getPickByBot,
-  renderOptionPicked,
-  selectOption,
-  setWinner,
-} from './index.js';
-import {
-  changeUrl,
-  renderTemplate,
-} from './router.js';
-import {
-  leaveGame,
-  leaveQueue,
-  sendPickOption,
-} from './sockets.js';
+import { Options } from "../components/Options.js";
+import { SecondOption } from "../components/SecondOption.js";
+import { Timer } from "../components/Timer.js";
+import { MainTemplate } from "../views/Main.js";
+import { OnlineTemplate } from "../views/Online.js";
+import { getColorOption, getPickByBot, renderOptionPicked, selectOption, setWinner } from "./index.js";
+import { changeUrl, renderTemplate } from "./router.js";
+import { leaveGame, leaveQueue, sendPickOption } from "./sockets.js";
 
 const isOptionsPicked = {
     firstOption: null,
@@ -81,6 +68,8 @@ function playAgainOnline() {
     resetGame();
     resetTimer();
     selectOption(options.parentNode, true);
+
+    console.log(isOptionsPicked);
 }
 
 function getScoreOnline() {
@@ -192,19 +181,19 @@ function removeTimer(timer, timerElement) {
 }
 
 export {
-  addConfirmCount,
-  checkOptionsPicked,
-  endGame,
-  firstPlayerOption,
-  getScoreOnline,
-  isOptionsPicked,
-  leaveInQueue,
-  leaveRoomInGame,
-  optionsPicked,
-  playAgainOnline,
-  removeTimer,
-  renderScoreOnline,
-  setTimer,
-  showResults,
-  startGame,
+    addConfirmCount,
+    checkOptionsPicked,
+    endGame,
+    firstPlayerOption,
+    getScoreOnline,
+    isOptionsPicked,
+    leaveInQueue,
+    leaveRoomInGame,
+    optionsPicked,
+    playAgainOnline,
+    removeTimer,
+    renderScoreOnline,
+    setTimer,
+    showResults,
+    startGame,
 };
