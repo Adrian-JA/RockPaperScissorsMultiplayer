@@ -68,8 +68,6 @@ function playAgainOnline() {
     resetGame();
     resetTimer();
     selectOption(options.parentNode, true);
-
-    console.log(isOptionsPicked);
 }
 
 function getScoreOnline() {
@@ -145,7 +143,6 @@ function defaultPick() {
     const { option } = getPickByBot();
     firstPlayerOption(option);
 
-    console.log(option);
     sendPickOption(option);
 }
 
